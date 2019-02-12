@@ -1,0 +1,9 @@
+
+once eyou have the dockerfile in place 
+docker build -t /tschnedler/tsm .
+once finished TSM client will be installed on the container image run it
+docker run -it /tschnedler/tsm /bin/bash
+the port 1500 has been mapped all ready for communication from the container to the host.
+cd to /opt/tivoli/tsm/client/ba/bin and edit the dsm.sys and dsm.opt file for the TSM backup server you need to connect to.
+Once that is done you can do a dsmc rest command to restore files to the host from your backups. 
+Once done restoring the files you can just exit and should now be good.
